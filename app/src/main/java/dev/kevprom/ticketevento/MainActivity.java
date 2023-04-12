@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<DataSnapshot> task) {
                                 //agregue aqui kevin una linea------------------------------------>
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                
+                                //agregue una linea de codigo aqui kevin------->
 
                                 if (!task.isSuccessful()) {
                                     Log.e("firebase", "Error al obtener la información", task.getException());
