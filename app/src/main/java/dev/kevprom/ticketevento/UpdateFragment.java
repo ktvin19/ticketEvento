@@ -93,7 +93,7 @@ public class UpdateFragment extends DialogFragment {
                     }
                 });*/
                 //ingrese una linea aqui kevin ----------------------------------->
-                FirebaseUser user = mAuth.getCurrentUser();
+                //FirebaseUser user = mAuth.getCurrentUser();
                 if (!task.isSuccessful()) {
                     Log.e("firebase", "Error al obtener la información", task.getException());
                 } else {
@@ -101,7 +101,7 @@ public class UpdateFragment extends DialogFragment {
                         if ( Integer.parseInt(task.getResult().getValue().toString() ) == 0 ){
                             mDatabase.child(code_).child("estado").setValue(1);
                             //agregue linea aqui kevin -------------------->
-                            mDatabase.child(code_).child("usuario").setValue(user.getEmail());
+                            //mDatabase.child(code_).child("usuario").setValue(user.getEmail());
                             Toast.makeText( getContext(), "Ticket "+ code_ +" activado nuevamente", Toast.LENGTH_LONG).show();
                             getActivity().finish();
                         }else {

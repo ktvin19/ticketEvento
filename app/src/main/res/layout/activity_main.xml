@@ -100,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Leer QR"
+                    android:text="Verificar Entrada"
                     android:textColor="#263238"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="@+id/btnLeer"

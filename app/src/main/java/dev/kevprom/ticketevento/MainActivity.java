@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void scanCode() {
         ScanOptions options = new ScanOptions();
-        options.setPrompt("Leer codigo QR de entrada");
+        options.setPrompt("Verificar Entrada");
         options.setBeepEnabled(true);
         options.setOrientationLocked(true);
         options.setCaptureActivity(CaptureAct.class);
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<DataSnapshot> task) {
                                 //agregue aqui kevin una linea------------------------------------>
-                                FirebaseUser user = mAuth.getCurrentUser();
+                                //FirebaseUser user = mAuth.getCurrentUser();
                                 //agregue una linea de codigo aqui kevin------->
 
                                 if (!task.isSuccessful()) {
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                                         if ( Integer.parseInt(task.getResult().getValue().toString() ) == 1 ){
                                             mDatabase.child(result.getContents()).child("estado").setValue(0);
                                             //agregue aqui kevin una linea-------------------------------------------->
-                                            mDatabase.child(result.getContents()).child("usuario").setValue(user.getEmail());
+                                            //mDatabase.child(result.getContents()).child("usuario").setValue(user.getEmail());
                                             //agregue aqui kevin una linea-------------------------------------------->
                                             NoRegistradoFragment f = new NoRegistradoFragment();
                                             f.show(getSupportFragmentManager(), "Nuevo registro");
