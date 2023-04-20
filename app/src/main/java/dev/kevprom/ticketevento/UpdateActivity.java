@@ -42,7 +42,7 @@ public class UpdateActivity extends AppCompatActivity {
 //            Toast.makeText(getApplicationContext(), getTxtCodigo(), Toast.LENGTH_LONG).show();
 //            getFirebase();
             Log.i("codigo barras ----->",txtBuscarCod.getText().toString().trim().length()+"");
-            if (txtBuscarCod.getText().toString().trim().length() <= 9){
+            if (txtBuscarCod.getText().toString().trim().length() <= 4){
 
                 Toast.makeText(getApplicationContext(), "Ingrese un código válido", Toast.LENGTH_SHORT).show();
             }else{
